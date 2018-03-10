@@ -1,0 +1,34 @@
+.header {
+	height: 95vh;
+	/* The linear-gradient - Fades the green from left to the bottom right */
+	background-image: linear-gradient(
+		to right bottom, 
+		 rgba($color-primary,0.6),
+		 	rgba($color-secondary,0.3)),
+		 url(../img/rafting.jpg);
+	background-size: cover;
+	background-position: bottom; /*The viewport will crop the top of the image */
+	clip-path: polygon(0 0, 100% 0 ,100% 85%, 0 100%);
+	position: relative;
+}
+
+.logo_div {
+	position: absolute;
+	top: 8.5rem;
+	left: 8.5rem;
+}
+
+.logo {
+
+	height: 6.5rem;
+}
+/* Adventure - Experience the rapids */
+.attention_grabber {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/*This transforms the div to be shifed half of the length to the left and the sme for the top */
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}

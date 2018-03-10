@@ -1,0 +1,20 @@
+
+/* This is done to remove the margin and padding added by most browsers */
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	/* defines what the size of 1rem */
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}
+

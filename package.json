@@ -1,0 +1,29 @@
+{
+  "name": "whitewater",
+  "version": "1.0.0",
+  "description": "Nexter webpage",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Ken Coppola",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwave317/Whitewater.git#whitewater"
+  },
+  "keywords": [
+    "whitewater",
+    "rafting",
+    "tours",
+    "vacation",
+    "kayaking"
+  ],
+  "bugs": {
+    "url": "https://github.com/mwave317/Whitewater/issues"
+  },
+  "homepage": "https://github.com/mwave317/Whitewater/tree/whitewater#readme"
+}
