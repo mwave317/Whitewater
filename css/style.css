@@ -1,3 +1,5 @@
+/* Colors */
+/* Font */
 /* This is done to remove the margin and padding added by most browsers */
 *,
 *::after,
@@ -7,65 +9,11 @@
   box-sizing: inherit; }
 
 html {
-  /*Where the route font size is set */
+  /* defines what the size of 1rem */
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-/* Section A - Header */
-.header {
-  height: 95vh;
-  /* The linear-gradient - Fades the green from left to the bottom right */
-  background-image: linear-gradient(to right bottom, rgba(0, 255, 255, 0.6), rgba(15, 36, 205, 0.3)), url(../img/rafting.jpg);
-  background-size: cover;
-  background-position: bottom;
-  /*The viewport will crop the top of the image */
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  position: relative; }
-
-.logo_div {
-  position: absolute;
-  top: 8.5rem;
-  left: 8.5rem; }
-
-.logo {
-  height: 6.5rem; }
-
-.attention_grabber {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /*This transforms the div to be shifed half of the length to the left and the sme for the top */
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.primary_heading {
-  color: white;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-
-.primary_heading_main {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  display: block;
-  margin-left: 1rem;
-  animation: moveInLeft 2s ease-out; }
-
-.primary_heading_sub {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: .25rem;
-  animation: moveInRight 2s ease-out;
-  padding-bottom: 3rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -87,8 +35,69 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.primary_heading {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .primary_heading_main {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    display: block;
+    margin-left: 1rem;
+    animation: moveInLeft 2s ease-out; }
+  .primary_heading_sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .25rem;
+    animation: moveInRight 2s ease-out;
+    padding-bottom: 3rem; }
+
+.secondary-heading {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, cyan, #0f24cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  text-shadow: 0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+  /*	&:hover {
+		transform: skewY(20deg) skewX(15deg);
+	}*/ }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 9em;
@@ -102,6 +111,9 @@ body {
 .btn:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.3rem);
@@ -110,6 +122,8 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777; }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -123,9 +137,53 @@ body {
   z-index: -1;
   transition: all .4s; }
 
-.btn-white::after {
-  background-color: #fff; }
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #0f24cd;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #0f24cd;
+  padding: 3px;
+  transition: all .2s; }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+.btn-text:hover {
+  background-color: cyan;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0px); }
+
+.header {
+  height: 95vh;
+  /* The linear-gradient - Fades the green from left to the bottom right */
+  background-image: linear-gradient(to right bottom, rgba(0, 255, 255, 0.6), rgba(15, 36, 205, 0.3)), url(../img/rafting.jpg);
+  background-size: cover;
+  background-position: bottom;
+  /*The viewport will crop the top of the image */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative; }
+
+.logo_div {
+  position: absolute;
+  top: 8.5rem;
+  left: 8.5rem; }
+
+.logo {
+  height: 6.5rem; }
+
+/* Adventure - Experience the rapids */
+.attention_grabber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*This transforms the div to be shifed half of the length to the left and the sme for the top */
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 12rem 0;
+  margin-top: -20vh; }

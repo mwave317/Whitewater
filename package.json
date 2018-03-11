@@ -8,9 +8,7 @@
   },
   "author": "Ken Coppola",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^4.7.2"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mwave317/Whitewater.git#whitewater"
@@ -25,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/mwave317/Whitewater/issues"
   },
-  "homepage": "https://github.com/mwave317/Whitewater/tree/whitewater#readme"
+  "homepage": "https://github.com/mwave317/Whitewater/tree/whitewater#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
 }

@@ -1,7 +1,7 @@
 body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
-	font-size: 1.6rem;
+	font-size: $default-font-size;
 	line-height: 1.7;
 	color: $color-gray-dark;
 	padding: 3rem;
@@ -11,9 +11,8 @@ body {
 	color: rgb(255,255,255);
 	text-transform: uppercase;
 	backface-visibility: hidden;
-	
 
-	$_main {
+	&_main {
 		font-size: 2rem;
 		font-weight: 700;
 		letter-spacing: 1.5rem;
@@ -22,14 +21,41 @@ body {
 		animation: moveInLeft 2s ease-out;
 	}
 
-	$_sub {
+	&_sub {
 		display: block;
 		font-size: 1rem;
 		font-weight: 400;
 		letter-spacing: .25rem;
 		animation: moveInRight 2s ease-out;
 		padding-bottom: 3rem;
-	
+    }
+}
+
+.secondary-heading {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $color-primary, $color-secondary);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all .2s;
+	text-shadow: .5rem .5rem .25rem rgba($color-black, .2);
+/*	&:hover {
+		transform: skewY(20deg) skewX(15deg);
+	}*/
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
 	}
 
 }
