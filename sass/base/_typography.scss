@@ -11,6 +11,7 @@ body {
 	color: rgb(255,255,255);
 	text-transform: uppercase;
 	backface-visibility: hidden;
+	transform: skewY(7deg);
 
 	&_main {
 		font-size: 2rem;
@@ -54,7 +55,7 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	&:first-child {
-		margin-top: 36rem;
+		margin-top: 33rem;
 	}
 }
 	.paragraph {

@@ -46,7 +46,8 @@ body {
 .primary_heading {
   color: white;
   text-transform: uppercase;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  transform: skewY(7deg); }
   .primary_heading_main {
     font-size: 2rem;
     font-weight: 700;
@@ -83,7 +84,7 @@ body {
   font-weight: 700;
   text-transform: uppercase; }
   .heading-tertiary:first-child {
-    margin-top: 36rem; }
+    margin-top: 33rem; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -205,6 +206,69 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.card {
+  /* Functionality */
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  margin-bottom: 8rem;
+  /*FRONT SIDE STYLING */ }
+  .card:first-child {
+    margin-top: -5rem; }
+  .card_side {
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card_side_front {
+      background-color: #fff; }
+    .card_side_back {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+      .card_side_back_1 {
+        /*{
+				background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);*/ }
+  .card:hover .card_side_front {
+    transform: rotateY(-180deg); }
+  .card:hover .card_side_back {
+    transform: rotateY(0); }
+  .card_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    /*clip path will not work on mobile devices */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card_picture_1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/Twilight_Canopy_Tour_670x900-200x268.jpg); }
+    .card_picture_2 {
+      background-image: url(../img/zip-line-Header-1-2.jpg); }
+    .card_picture_3 {
+      background-image: url(../img/Canopy_Tour_670x9002.jpg-200x268.jpeg); }
+  .card_heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 11rem;
+    right: 2rem;
+    width: 75%; }
+  .card_heading_span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card_heading_span_1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+
 .header {
   height: 95vh;
   /* The linear-gradient - Fades the green from left to the bottom right */
@@ -212,7 +276,9 @@ body {
   background-size: cover;
   background-position: bottom;
   /*The viewport will crop the top of the image */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  /*	transform: skewY(-7deg);*/
   position: relative; }
 
 .logo_div {
@@ -239,5 +305,14 @@ body {
 
 .section-features {
   padding: 5rem 0;
+  transform: skewY(-7deg);
   background-image: linear-gradient(to right bottom, rgba(0, 255, 255, 0.6), rgba(15, 36, 205, 0.3)), url(../img/overview_wwrc.png);
-  background-size: cover; }
+  background-size: cover;
+  margin-top: -2rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  margin-top: -2rem;
+  padding: 5rem 0 50rem 0; }
