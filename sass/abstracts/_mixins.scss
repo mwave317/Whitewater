@@ -1,0 +1,47 @@
+//MANAGED MEDIA QUERRIES
+
+@mixin iphone-7plus {
+	@media (min-width: 400px) { @content };
+}
+
+/*
+$breakpoint argument choices: 
+
+-iphone 7 and 8 plus
+-tab portrait
+-tab landscape
+-desktop
+*/
+
+//1em = 16px
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == iphonePlus {
+		//376px 23.5 400px 25em
+		@media (min-width: 23.5em) { @content };
+	}
+
+	@if $breakpoint == tab-portrait {
+		//600px
+		@media (min-width: 37.5em) { @content };
+	}
+
+	@if $breakpoint == tab-landscape {
+		//900px
+		@media (min-width: 56.25em) { @content };
+	}
+
+	@if $breakpoint == tab-ipadPro {
+		@media (min-width: 64em) { @content };
+	}
+
+	@if $breakpoint == desktop {
+		//1200px
+		@media (min-width: 75em) { @content };
+	}
+
+	@if $breakpoint == large-desktop {
+		//1800px
+		@media (min-width: 112.5em) { @content };
+	}
+}

@@ -3,6 +3,15 @@
 	padding: 15rem 0 5rem 0;
 	margin-top: -20vh;
 
+		// controls the margin for which adventure will you choose
+		@include respond (tab-portrait) {
+			margin-top: -15vh;
+		}
+
+		@include respond (tab-ipadPro) {
+			margin-top: -10vh;
+		}
+
 
 }
 

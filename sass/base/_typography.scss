@@ -4,7 +4,7 @@ body {
 	font-size: $default-font-size;
 	line-height: 1.7;
 	color: $color-gray-dark;
-	padding: 3rem;
+	
 }
 
 .primary_heading {
@@ -49,14 +49,54 @@ body {
 	padding: 0 1rem;
 }
 
+
 .heading-tertiary {
 	font-size: $default-font-size;
 	font-weight: 700;
 	text-transform: uppercase;
+
+	// controls the space between the pictures and the heading
 	&:first-child {
-		margin-top: 33rem;
+		margin-top: 36rem;
+
+		@include respond (iphonePlus) {
+			margin-top: 39rem;
+		}
+
+
+		@include respond (tab-landscape) {
+			margin-top: 49rem;
+		}
+
+		@include respond (tab-portrait) {
+			margin-top: 52rem;
+		}
+
+		@include respond (tab-ipadPro) {
+			margin-top: 70rem;
+		}
+
+		@include respond (desktop) {
+			margin-top: 69rem;
+		}
+
+
+
+		
 	}
-}
+
+	@include respond(iphone) {
+
+			&:first-child {
+				margin-top: 36rem;
+			}
+
+		}
+			
+		
+	}
+
+
 	.paragraph {
 	font-size: $default-font-size;
 

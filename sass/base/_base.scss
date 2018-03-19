@@ -11,10 +11,37 @@
 
 html {
 	/* defines what the size of 1rem */
-	font-size: 62.5%;
+	font-size: 62.5%; //1rem = 16px;
+
+	@include respond(tab-landscape) {
+		font-size: 56.25%;
+	}
+
+	@include respond(tab-portrait) {
+		font-size: 70%;
+	}
+
+	@include respond(desktop) {
+		font-size: 90%;
+	}
+
+	@include respond(large-desktop) {
+		font-size: 100%;
+	}
+
+
+
+	
+
 }
 
 body {
 	box-sizing: border-box;
+
+	@include respond(tab-portrait) {
+		padding: 3rem;
+	}
+
+
 }
 

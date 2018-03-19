@@ -7,20 +7,68 @@
 		position: absolute;
 		z-index: 0;
 		transition: all .2s;
+		//For the width  of the pictures
+		@include respond (iphonePlus) {
+			width: 45%;
+		}
+
+
+		@include respond (tab-landscape) {
+			width: 45%;
+		}
+
+		@include respond (tab-portrait) {
+			width: 45%;
+		}
+
+		@include respond (tab-ipadPro) {
+			width: 45%;
+		}
+
+		@include respond (desktop) {
+			width: 25%;
+		}
 
 		&-p1 {
 			left: 5%;
 			top: -5rem;
+
+			//For the placement of the pictures
+			@include respond (desktop) {
+				left: 30%;
+			}
+
+			@include respond (large-desktop) {
+				left: 25%;
+			}
 		}
 
 		&-p2 {
 			left: 45%;
 			top: -3rem;
+
+			@include respond (desktop) {
+				left: 50%;
+			}
+
+			@include respond (large-desktop) {
+				left: 45%;
+			}
 		}
 
 		&-p3 {
 			left: 30%;
 			top: 5rem;
+
+			@include respond (desktop) {
+				left: 40%;
+				top: 10rem;
+			}
+
+			@include respond (large-desktop) {
+				left: 35%;
+				top: 10rem;
+			}
 		}
 
 		&:hover {
