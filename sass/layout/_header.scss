@@ -10,7 +10,6 @@
 	background-position: bottom; /*The viewport will crop the top of the image */
 	-webkit-clip-path: polygon(0 0, 100% 0 ,100% 85%, 0 100%);
 	clip-path: polygon(0 0, 100% 0 ,100% 85%, 0 100%);
-/*	transform: skewY(-7deg);*/
 	position: relative;
 }
 
