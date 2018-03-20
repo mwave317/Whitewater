@@ -1,165 +1,228 @@
 .card {
-
-	/* Functionality */
-	perspective: 150rem;
-	-moz-perspective: 150rem;
-	position: relative;
-	height: 52rem;
-	margin-bottom: 8rem;
-
-	&:first-child {
-		margin-top: -5rem;
-	}
-
-	&_side {
-		height: 52rem;
-		transition: all .8s ease;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		backface-visibility: hidden;
-		border-radius: 3px;
-		overflow: hidden;
-		box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-
-		&_front {
-			background-color: $color-white;
-		}
-	
-		&_back {
-			-webkit-transform: rotateY(180deg);
-			transform: rotateY(180deg);
-
-			&_1 {
-				background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-			}
-
-			&_2 {
-			background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
-			}
-
-			&_3 {
-			background-image: linear-gradient(to top right, $color-gray-dark, $color-gray-lignt-2);
-			}
-		}
-	}
-
-	
-	&:hover &_side_front {
-		-webkit-transform: rotateY(-180deg);
-		transform: rotateY(-180deg);
-	}
-
-	&:hover &_side_back {
-		-webkit-transform: rotateY(0);
-		transform: rotateY(0);
-	
-	}
-
-	/*FRONT SIDE STYLING */
-
-	&_picture {
-		background-size: cover;
-		height: 23rem;
-		background-blend-mode: screen;
-		/*clip path will not work on mobile devices */
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-		&_1 {
-		   background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/Canopy_Tour_670x9002.jpg-200x268.jpeg);
-		}
-
-		&_2 {
-		   background-image: linear-gradient(to right bottom, $color-primary, $color-secondary), url(../img/zip-line-Header-1-2.jpg);
-		}
-
-		&_3 {
-		   background-image: linear-gradient(to right bottom, $color-gray-lignt, $color-gray-dark), url(../img/Twilight_Canopy_Tour_670x900-200x268.jpg);
-		}
-	}
-
-	&_heading {
-		font-size: 2.5rem;
-		font-weight: 300;
-		text-transform: uppercase;
-		text-align: right;
-		color: $color-white;
-		position: absolute;
-		top: 11rem;
-		right: 2rem;
-		width: 75%;
-
-	}
-
-	&_heading_span {
-		padding: 1rem 1.5rem;
-		-webkit-box-decoration-break: clone;
-		box-decoration-break: clone;
-
-		&_1 {
-			background-image: linear-gradient(to right bottom,
-			 rgba($color-secondary-light, .85),
-			 rgba($color-secondary-dark, .85));
-		}
-
-		&_2 {
-			background-image: linear-gradient(to right bottom,
-			 rgba($color-primary, .85),
-			 rgba($color-secondary, .85));
-		}
-		
-		&_3 {
-			background-image: linear-gradient(to right bottom,
-			 rgba($color-gray-lignt, .85),
-			 rgba($color-gray-dark, .85));
-		}
-	}
-	&_details {
-		font-size: 1rem;
-		padding: 1rem 1.5rem;
-
-		ul {
-			margin: 0 auto;
-
-		li {
-			list-style: none;
-			padding: 1rem 1.5rem 0rem 1.5rem;
-
-		}
+			/* Functionality */
+			perspective: 150rem;
+			-moz-perspective: 150rem;
+			cursor: pointer;
+			position: relative;
+			height: 52rem;
+			margin-bottom: 8rem;
 			
 
-		}
-	}
+			&:first-child {
+				margin-top: -5rem;
+			}
 
-	/*BACK SIDE STYLING */
+			&_side {
+				height: 52rem;
+				-webkit-transition: all .8s ease;
+				transition: all .8s ease;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				
+				border-radius: 3px;
+				overflow: hidden;
+				box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
-	&_cta {
-	position: absolute;
-	margin-top: 2rem;
-	padding: 0 3rem;
-	color: $color-white;
-	}
+				&_front {
+					background-color: $color-white;
 
-	&_price_enticer {
+					a {
+					text-decoration: none;	
 
-	}
+					&:link, &:visited {
+					color: black;
 
-	&_price_box {
-		text-align: center;
-		margin-top: 2rem;
-		margin-bottom: 8rem;
-	}
+						}
+					}
+				}
+			
+				&_back {
+					-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+					
 
-	&_price_per {
-		font-size: 1.4rem;
-		text-transform: uppercase;
-	}
+					@include respond (iphone) {
+				
+					-ms-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+					}
 
-	&_price_value {
-		font-size: 6rem;
-		font-weight: 100;
-	}
+					@include respond (iphonePlus) {
+						
+					-ms-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+					}
+
+					&_1 {
+						background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+					}
+
+					&_2 {
+					background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+					}
+
+					&_3 {
+					background-image: linear-gradient(to top right, $color-gray-dark, $color-gray-lignt-2);
+					}
+				}
+			}
+
+			
+			
+
+				&:hover &_side_front { 
+						
+					-webkit-transform: rotateY(-180deg);
+					transform: rotateY(-180deg);
+					// @include respond(iphone) {
+						// -webkit-transform: rotateY(-180deg);
+						// transform: rotateY(-180deg);
+						// cursor: pointer;
+
+					// }
+
+					// @include respond(iphonePlus) {
+						// -webkit-transform: rotateY(-180deg);
+						// transform: rotateY(-180deg);
+						// cursor: pointer;
+
+					// }
+
+				}
+
+
+			&:hover &_side_back { 
+				-webkit-transform: rotateY(0);
+				transform: rotateY(0);
+				
+
+				@include respond(iphone) {
+				-webkit-transform: rotateY(0);
+				transform: rotateY(0);
+				
+
+				}
+
+				@include respond (iphonePlus) {
+				-webkit-transform: rotateY(0);
+				transform: rotateY(0);
+				
+				}
+			
+			}
+
+			/*FRONT SIDE STYLING */
+
+			&_picture {
+				background-size: cover;
+				height: 23rem;
+				background-blend-mode: screen;
+				/*clip path will not work on mobile devices */
+				-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+				clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+				&_1 {
+				   background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/Canopy_Tour_670x9002.jpg-200x268.jpeg);
+				}
+
+				&_2 {
+				   background-image: linear-gradient(to right bottom, $color-primary, $color-secondary), url(../img/zip-line-Header-1-2.jpg);
+				}
+
+				&_3 {
+				   background-image: linear-gradient(to right bottom, $color-gray-lignt, $color-gray-dark), url(../img/Twilight_Canopy_Tour_670x900-200x268.jpg);
+				}
+			}
+
+			&_heading {
+				font-size: 2.5rem;
+				font-weight: 300;
+				text-transform: uppercase;
+				text-align: right;
+				color: $color-white;
+				position: absolute;
+				top: 11rem;
+				right: 2rem;
+				width: 75%;
+
+			}
+
+			&_heading_span {
+				padding: 1rem 1.5rem;
+				-webkit-box-decoration-break: clone;
+				box-decoration-break: clone;
+
+				&_1 {
+					background-image: linear-gradient(to right bottom,
+					 rgba($color-secondary-light, .85),
+					 rgba($color-secondary-dark, .85));
+				}
+
+				&_2 {
+					background-image: linear-gradient(to right bottom,
+					 rgba($color-primary, .85),
+					 rgba($color-secondary, .85));
+				}
+				
+				&_3 {
+					background-image: linear-gradient(to right bottom,
+					 rgba($color-gray-lignt, .85),
+					 rgba($color-gray-dark, .85));
+				}
+			}
+			&_details {
+				font-size: 1rem;
+				padding: 1rem 1.5rem;
+				cursor: pointer;
+
+				ul {
+					margin: 0 auto;
+
+				li {
+					list-style: none;
+					padding: 1rem 1.5rem 0rem 1.5rem;
+
+				}
+					
+
+				}
+			}
+
+			/*BACK SIDE STYLING */
+
+			&_cta {
+			position: absolute;
+			margin-top: 2rem;
+			padding: 0 3rem;
+			color: $color-white;
+			}
+
+			&_price_enticer {
+
+			}
+
+			&_price_box {
+				text-align: center;
+				margin-top: 2rem;
+				margin-bottom: 8rem;
+			}
+
+			&_price_per {
+				font-size: 1.4rem;
+				text-transform: uppercase;
+			}
+
+			&_price_value {
+				font-size: 6rem;
+				font-weight: 100;
+			}
 
 
 }

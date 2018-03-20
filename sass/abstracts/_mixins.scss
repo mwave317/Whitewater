@@ -15,33 +15,74 @@ $breakpoint argument choices:
 
 //1em = 16px
 
-@mixin respond($breakpoint) {
+@mixin respond($breakpoint, $event: false) {
+	@if $breakpoint == iphone {
+		@if($event != null) {
+			@media (min-width: 20em) and ($event) { @content };
+		} else {
+
+			//320px 20em
+			@media (min-width: 20em) { @content };
+		} 
+	}
+
 	@if $breakpoint == iphonePlus {
-		//376px 23.5 400px 25em
-		@media (min-width: 23.5em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//376px 23.5 400px 25em
+			@media (min-width: 23.5em) { @content };
+		} 
 	}
 
 	@if $breakpoint == tab-portrait {
-		//600px
-		@media (min-width: 37.5em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//600px
+			@media (min-width: 37.5em) { @content };
+		} 
 	}
 
 	@if $breakpoint == tab-landscape {
-		//900px
-		@media (min-width: 56.25em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//900px
+			@media (min-width: 56.25em) { @content };
+		} 
 	}
 
 	@if $breakpoint == tab-ipadPro {
-		@media (min-width: 64em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//1024px
+			@media (min-width: 64em) { @content };
+		} 
 	}
 
 	@if $breakpoint == desktop {
-		//1200px
-		@media (min-width: 75em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//1200px
+			@media (min-width: 75em) { @content };
+		} 
 	}
 
 	@if $breakpoint == large-desktop {
-		//1800px
-		@media (min-width: 112.5em) { @content };
+		@if($event != null) {
+
+		} else {
+
+			//1800px
+			@media (min-width: 112.5em) { @content };
+		} 
 	}
 }

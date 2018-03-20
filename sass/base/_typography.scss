@@ -40,9 +40,31 @@ body {
 	color: transparent;
 	transition: all .2s;
 	text-shadow: .5rem .5rem .25rem rgba($color-black, .2);
-/*	&:hover {
-		transform: skewY(20deg) skewX(15deg);
-	}*/
+
+		// @include respond (iphonePlus) {
+		// 	margin-top: 39rem;
+		// }
+
+		// @include respond (tab-landscape) {
+		// 	margin-top: 49rem;
+		// }
+
+		@include respond (tab-landscape) {
+			font-size: 3rem;
+		}
+		@include respond (tab-ipadPro) {
+			margin-top: 20rem;
+		}
+
+		@include respond (desktop) {
+			margin-top: 0rem;
+			
+		}
+
+		@include respond (large-desktop) {
+			margin-top: 1rem;
+		}
+
 }
 
 .col-1-of-small{
@@ -78,21 +100,7 @@ body {
 
 		@include respond (desktop) {
 			margin-top: 69rem;
-		}
-
-
-
-		
-	}
-
-	@include respond(iphone) {
-
-			&:first-child {
-				margin-top: 36rem;
-			}
-
-		}
-			
+		}			
 		
 	}
 
@@ -104,5 +112,5 @@ body {
 		margin-bottom: 3rem;
 
 	}
-
+}
 }
