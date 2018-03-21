@@ -82,19 +82,17 @@
 						
 					-webkit-transform: rotateY(-180deg);
 					transform: rotateY(-180deg);
-					// @include respond(iphone) {
-						// -webkit-transform: rotateY(-180deg);
-						// transform: rotateY(-180deg);
-						// cursor: pointer;
+					@include respond(iphone) {
+						-webkit-transform: rotateY(-180deg);
+						transform: rotateY(-180deg);
 
-					// }
+					}
 
-					// @include respond(iphonePlus) {
-						// -webkit-transform: rotateY(-180deg);
-						// transform: rotateY(-180deg);
-						// cursor: pointer;
+					@include respond(iphonePlus) {
+						-webkit-transform: rotateY(-180deg);
+						transform: rotateY(-180deg);
 
-					// }
+					}
 
 				}
 

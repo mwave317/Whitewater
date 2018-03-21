@@ -349,6 +349,18 @@ body {
   .card:hover .card_side_front {
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg); }
+    @media (min-width: 20em) and (false) {
+      .card:hover .card_side_front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg); } }
+    @media (min-width: 20em) {
+      .card:hover .card_side_front else {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg); } }
+    @media (min-width: 23.5em) {
+      .card:hover .card_side_front else {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg); } }
   .card:hover .card_side_back {
     -webkit-transform: rotateY(0);
     transform: rotateY(0); }
