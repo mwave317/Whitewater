@@ -1,3 +1,3 @@
 # whitewater
 
-Currenly this site is coded for the Iphone 5. The site is still being developed. 
+I have not finished the media queries for a screen size above 900px. 
